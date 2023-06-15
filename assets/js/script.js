@@ -15,22 +15,6 @@ let musicName = document.querySelector(".details-player h3");
 let artistName = document.querySelector(".details-player p");
 let imagem = document.querySelector(".img-player img");
 
-
-document.querySelector(".muteSong").addEventListener("click", () => {
-    if(music.classList.contains("open")){
-        music.classList.remove("open");
-        document.querySelector('.mute-control').src= "assets/img/ico-6.png";
-        music.muted = true;
-    }
-    else{
-        music.classList.add('open');
-        document.querySelector('.mute-control').src= "assets/img/ico-7.png";
-        music.muted = false;
-    }
-});
-
-// BTN Mute
-
 document.querySelector(".playPause").addEventListener("click", () => {
     if(music.classList.contains("open")){
         music.classList.remove("open");
@@ -121,8 +105,4 @@ function changeMinutes(seconds) {
     return setMinutes+":"+setSeconds;
 }
 
-
-
-
-
-
+// Changing the time to minutes
