@@ -1,6 +1,13 @@
 let allAudio = [
 
 {
+    name: "The Chain (2004 Remaster)",
+    artist: "Fleetwood Mac",
+    img: "assets/img/capa9.png",
+    src: "assets/music/The Chain.mp3"
+},
+
+{
     name: "Dreams (2004 Remastered)",
     artist: "Fleetwood Mac",
     img: "assets/img/capa1.jpg",

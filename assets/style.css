@@ -150,6 +150,11 @@ body.dark label {
     width: 20px;
 }
 
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (max-width: 760px) {
     .player{
         width: 100vw;
@@ -160,4 +165,3 @@ body.dark label {
         align-items: center;
         justify-content: center;
 }
-
