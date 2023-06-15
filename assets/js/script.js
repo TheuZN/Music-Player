@@ -57,7 +57,7 @@ music.ontimeupdate = function() {
     let timerOn = document.querySelector(".on");
     timerOn.textContent = changeMinutes(Math.floor(music.currentTime));
 };
-  
+
 // Music Progress
 
 function changeMusic(index){
@@ -67,6 +67,7 @@ function changeMusic(index){
         artistName.textContent = allAudio[index].artist;
         imagem.src = allAudio[index].img;
         music.play();
+        document.querySelector('.main-control').src= "assets/img/ico-2.png";
     });
 }
 
