@@ -44,7 +44,7 @@ let allAudio = [
 
 {
     name: "Father And Son (1970)",
-    artist: "Fleetwood Mac",
+    artist: "Cat Stevens",
     img: "assets/img/capa6.png",
     src: "assets/music/Father And Son.mp3"
 },
