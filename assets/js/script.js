@@ -6,27 +6,26 @@ btn.addEventListener("change", (e) => {
 
 // Dark Mode
 
-let music = document.getElementById("music1");
 let indexMusic = 0;
 
+let music = document.getElementById("music1");
 let progress = document.getElementById("progress");
 let song = document.querySelector(".progress-player audio");
 let musicName = document.querySelector(".details-player h3");
 let artistName = document.querySelector(".details-player p");
 let imagem = document.querySelector(".img-player img");
 
-document.querySelector(".playPause").addEventListener("click", () => {
-    if(music.classList.contains("open")){
-        music.classList.remove("open");
-        document.querySelector('.main-control').src= "assets/img/ico-1.png";
-        music.pause();
-    }
-    else{
-        music.classList.add('open');
-        document.querySelector('.main-control').src= "assets/img/ico-2.png";
+function togglePlayPause() {
+    if (music.paused) {
         music.play();
+        document.querySelector('.main-control').src = "assets/img/ico-2.png";
+    } else {
+        music.pause();
+        document.querySelector('.main-control').src = "assets/img/ico-1.png";
     }
-});
+}
+
+document.querySelector(".playPause").addEventListener("click", togglePlayPause);
 
 // BTN Play Pause
 
@@ -36,12 +35,6 @@ music.onloadedmetadata = function(){
 
     let timerOff = document.querySelector(".off");
     timerOff.textContent = changeMinutes(Math.floor(music.duration));
-}
-
-if(music.play()){
-    setInterval(()=>{
-        progress.value = music.currentTime;
-    },500);
 }
 
 progress.onchange = function(){
