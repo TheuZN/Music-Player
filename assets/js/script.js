@@ -27,6 +27,12 @@ function togglePlayPause() {
 
 document.querySelector(".playPause").addEventListener("click", togglePlayPause);
 
+if(music.play()){
+    setInterval(()=>{
+        progress.value = music.currentTime;
+    },500);
+}
+
 // BTN Play Pause
 
 music.onloadedmetadata = function(){
