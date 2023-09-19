@@ -18,7 +18,7 @@ let imagem = document.querySelector(".img-player img");
 function togglePlayPause() {
     if (music.paused) {
         music.play();
-        document.querySelector('.main-control').src = "assets/img/ico-2.png";
+        document.querySelector('.main-control').src = "assets/img/play-pause-o-svgrepo-com.svg";
         setInterval(()=>{
             progress.value = music.currentTime;
         },500);
@@ -26,7 +26,7 @@ function togglePlayPause() {
     
     else {
         music.pause();
-        document.querySelector('.main-control').src = "assets/img/ico-1.png";
+        document.querySelector('.main-control').src = "assets/img/play-button-o-svgrepo-com.svg";
     }
 }
 
@@ -46,7 +46,7 @@ music.onloadedmetadata = function(){
 progress.onchange = function(){
     music.play();
     music.classList.add('open');
-    document.querySelector('.main-control').src= "assets/img/ico-2.png";
+    document.querySelector('.main-control').src= "assets/img/play-pause-o-svgrepo-com.svg";
 
     music.currentTime = progress.value;
     progress.max = music.duration;
@@ -66,7 +66,7 @@ function changeMusic(index){
         artistName.textContent = allAudio[index].artist;
         imagem.src = allAudio[index].img;
         music.play();
-        document.querySelector('.main-control').src= "assets/img/ico-2.png";
+        document.querySelector('.main-control').src= "assets/img/play-pause-o-svgrepo-com.svg";
     });
 }
 
@@ -80,7 +80,7 @@ document.querySelector(".advance").addEventListener("click", () => {
     changeMusic(indexMusic);
 
     music.play();
-    document.querySelector('.main-control').src= "assets/img/ico-2.png";
+    document.querySelector('.main-control').src= "assets/img/play-pause-o-svgrepo-com.svg";
 });
 
 document.querySelector(".back").addEventListener("click", () => {
@@ -91,7 +91,7 @@ document.querySelector(".back").addEventListener("click", () => {
     changeMusic(indexMusic);
     
     music.play();
-    document.querySelector('.main-control').src= "assets/img/ico-2.png";
+    document.querySelector('.main-control').src= "assets/img/play-pause-o-svgrepo-com.svg";
 });
 
 // Advance and Back BTN

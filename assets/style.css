@@ -140,7 +140,7 @@ body.dark label {
     border-radius: 20px;
     cursor: pointer;
     margin: 20px 0;
-    background: #a9abac;
+    background: #f1f1f1;
 }
 
 #progress::-webkit-slider-thumb {
@@ -154,6 +154,11 @@ body.dark label {
 .timer {
     display: flex;
     justify-content: space-between;
+}
+
+.control img {
+    background-color: #f1f1f1;
+    border-radius: 1rem;
 }
 
 @media (max-width: 760px) {
