@@ -19,7 +19,12 @@ function togglePlayPause() {
     if (music.paused) {
         music.play();
         document.querySelector('.main-control').src = "assets/img/ico-2.png";
-    } else {
+        setInterval(()=>{
+            progress.value = music.currentTime;
+        },500);
+    }  
+    
+    else {
         music.pause();
         document.querySelector('.main-control').src = "assets/img/ico-1.png";
     }
@@ -27,11 +32,6 @@ function togglePlayPause() {
 
 document.querySelector(".playPause").addEventListener("click", togglePlayPause);
 
-if(music.play()){
-    setInterval(()=>{
-        progress.value = music.currentTime;
-    },500);
-}
 
 // BTN Play Pause
 
