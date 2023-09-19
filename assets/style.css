@@ -171,4 +171,14 @@ body.dark label {
         align-items: center;
         justify-content: center;
 }
+
+#progress {
+    background: white;
+}
+
+.control img {
+    background-color: initial;
+    border-radius: 0;
+}
+
 }
